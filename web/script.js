@@ -28,7 +28,32 @@ const questions = [
     { question: "Are you seeking opportunities in environmental careers?", options: ["Yes", "No"] }
     // Add more questions as needed
 ];
+const questions = [
+    { question: "Are you currently enrolled in a post-secondary institution?", options: ["Yes", "No"] },
+    { question: "Are you seeking opportunities in environmental careers?", options: ["Yes", "No"] }
+    // Add more questions as needed
+];
 
+function openModal() {
+    var modal = document.getElementById('questionnaireModal');
+    modal.style.display = 'block';
+
+    var closeBtn = document.querySelector('.close');
+    closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', outsideClick);
+}
+
+function closeModal() {
+    var modal = document.getElementById('questionnaireModal');
+    modal.style.display = 'none';
+}
+
+function outsideClick(e) {
+    var modal = document.getElementById('questionnaireModal');
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
+}
 function openModal() {
     var modal = document.getElementById('questionnaireModal');
     modal.style.display = 'block';
@@ -67,7 +92,11 @@ function displayQuestions() {
     document.getElementById('startBtn').style.display = 'none'; // Hide start button
 
 }
+}
 
+function displayResults() {
+    // Implement your logic to handle the submission of answers and display results
+    document.getElementById('questionnaireModal').style.display = 'none';
 function displayResults() {
     // Implement your logic to handle the submission of answers and display results
     document.getElementById('questionnaireModal').style.display = 'none';

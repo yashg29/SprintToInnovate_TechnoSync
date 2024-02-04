@@ -16,6 +16,32 @@ document.addEventListener('DOMContentLoaded', function () {
             darkModeRadio.checked = true;
         }
     }
+
+    const loginButton = document.getElementById('loginButton');
+    const loginPopup = document.getElementById('loginPopup');
+    const closePopupButton = loginPopup.querySelector('.close');
+
+    loginButton.addEventListener('click', () => openPopup());
+    closePopupButton.addEventListener('click', () => closePopup());
+
+    function openPopup() {
+        loginPopup.style.display = 'block';
+    }
+
+    function closePopup() {
+        loginPopup.style.display = 'none';
+    }
+
+    function login() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Add your login logic here
+        console.log(`Email: ${email}, Password: ${password}`);
+
+        // Close the popup after login (you may replace this with actual login logic)
+        closePopup();
+    }
 });
 
 function setTheme(theme) {

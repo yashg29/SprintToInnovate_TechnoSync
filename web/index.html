@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Riipen Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Riipen Prototype</a>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Unlock Your Potential with Riipen</h1>
+        <p>Discover projects that match your skills and interests.</p>
+        <button id="startBtn" class="cta">Start Assessment</button>
+    </section>
+    <main>
+        <section id="questionnaire" style="display:none;">
+            <div id="questions"></div>
+        </section>
+        <section id="results" style="display:none;">
+            <h2>You are eligible for the following projects:</h2>
+            <ul id="eligibleProjects"></ul>
+        </section>
+    </main>
+    <!-- Questionnaire Modal -->
+    <div id="questionnaireModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Discover Your Eligible Projects</h2>
+            <div id="questions">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+            <button onclick="displayResults()">Submit</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Riipen Prototyp e. All rights reserved.</p>
+    </footer>
+</body>
+</html>
